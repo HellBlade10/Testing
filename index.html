@@ -7,23 +7,33 @@
   <title>Testing Page</title>
 </head>
 <body>
-  <h1>
+  <h1 style="display: flex;">
     This is a test page.
   </h1>
+  <button id="toggle">Dark Mode</button>
   <div class="container"></div>
-  <form style="justify-content:center; align-items:center;">
-    <fieldset style="min-width: 100px; max-width: 250px;">
+  <form style="display: flex;justify-content:center; align-items:center; align-content: center;">
+    <fieldset style="min-width: 125px; max-width: 250px;">
       <legend>
       Forms
     </legend>
-      <label for="email" id="mail-name">E-mail</label>
+      <label for="email" id="mail-name">E-mail: </label><br>
         <input type="text" name="email" placeholder="Enter email"><br>
       <label for="message" id="feedback">Feedback: </label><br>
-      <input type="text" name="message" placeholder="Enter message">
+      <input type="text" name="message" id="msg" placeholder="Enter message" maxlength="1024"><br>
       <input type="button" onclick="submit" value="Submit">
     </fieldset>
   </form>
-  <button id="toggle">Dark Mode</button>
+
   <script src="index.js"></script>
+  <script>
+    let text = document.getElementById('msg');
+    if (text.maxLength > 1024){
+        alert("Max length exceeded.");
+    }
+    else{
+        alert("Max length not exceeded.");
+    }
+  </script>
 </body>
 </html>
