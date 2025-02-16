@@ -28,12 +28,13 @@
   <script src="index.js"></script>
   <script>
     let text = document.getElementById('msg');
-    if (text.maxLength > 1024){
+    setTimeOut(()=>{
+      if (text.maxLength > 1024){
         alert("Max length exceeded.");
     }
     else{
         alert("Max length not exceeded.");
-    }
+    }},200);
   </script>
 </body>
 </html>
