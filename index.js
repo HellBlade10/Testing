@@ -8,6 +8,7 @@ btn.addEventListener("click", () => {
         btn.textContent = "Dark Mode";
     }
     else{
+        body[0].style.transition = "2s ease-in-out"; 
         body[0].style.backgroundColor = "black";
         body[0].style.color = "white";
         btn.textContent = "Light Mode";
